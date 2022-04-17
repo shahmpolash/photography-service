@@ -12,8 +12,8 @@
     text-shadow: #FC0 1px 0 10px;
 }
 .service img{
-    width: 400px;
-    height: 250px;
+    width: 100%;
+    
     border: 2px solid green;
     border-radius: 200px;
 }
