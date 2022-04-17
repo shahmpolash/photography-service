@@ -1,7 +1,15 @@
+.service-title{
+    color: rgb(96, 96, 228);
+}
+
 .service{
     background-color: azure;
     border: 2px solid black;
     border-radius: 5px;
+}
+
+.service p{
+    text-shadow: #FC0 1px 0 10px;
 }
 .service img{
     width: 400px;
@@ -10,9 +18,9 @@
     border-radius: 200px;
 }
 .services{
-    
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    margin: 100px 50px;
+    gap: 10px;
+    margin: 20px;
 }
+
