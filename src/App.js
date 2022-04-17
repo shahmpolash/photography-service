@@ -9,6 +9,7 @@ import Signup from './components/Signup/Signup';
 import Header from './components/Header/Header';
 import Service from './components/Service/Service';
 import Footer from './components/Footer/Footer';
+import RequireAuth from './components/Login/RequireAuth';
 
 function App() {
   return (
@@ -16,9 +17,14 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
         <Route path='/services' element={<Services></Services>}></Route>
-        <Route path='/services' element={<Service></Service>}></Route>
-        <Route path='/checkout' element={<CheckOut></CheckOut>}></Route>
+        <Route path='/service' element={<Service></Service>}></Route>
+        <Route path='/checkout' element={
+          <RequireAuth>
+            <CheckOut></CheckOut>
+          </RequireAuth>
+        }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
