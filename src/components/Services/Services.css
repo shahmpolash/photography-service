@@ -24,3 +24,9 @@
     margin: 20px;
 }
 
+/* Responsive  */
+@media only screen and (max-width: 800px) {
+    .services{
+        grid-template-columns: repeat(1, 1fr) ;
+    }
+}
