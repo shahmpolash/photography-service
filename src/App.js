@@ -31,7 +31,11 @@ function App() {
         }></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
         <Route path='/blog' element={<Blog></Blog>}></Route>
-        <Route path='/thankyou' element={<Thankyou></Thankyou>}></Route>
+        <Route path='/thankyou' element={
+          <RequireAuth>
+            <Thankyou></Thankyou>
+          </RequireAuth>
+        }></Route>
         <Route path='/login' element={<Login></Login>}></Route>
         <Route path='/signup' element={<Signup></Signup>}></Route>
       </Routes>

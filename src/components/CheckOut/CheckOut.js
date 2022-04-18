@@ -8,15 +8,15 @@ const CheckOut = () => {
             <h2>CheckOut</h2>
             <div className=' container w-50'>
             <form  className='input' action="">
-                <input type="text" name="name" id="" placeholder="Your Name" />
+                <input type="text" name="name" id="" placeholder="Your Name" required />
                 <br />
-                <input type="text" name="address" id="" placeholder="Your Address 1"  />
+                <input type="text" name="address" id="" placeholder="Your Address 1"  required />
                 <br />
-                <input type="text" name="address2" id="" placeholder="Your Address 2"  />
+                <input type="text" name="address2" id="" placeholder="Your Address 2" />
                 <br />
-                <input type="email" name="email" id="" placeholder="Your Email"  />
+                <input type="email" name="email" id="" placeholder="Your Email" required />
                 <br />
-                <input type="text" name="phone" id="" placeholder="Your Phone Number" />
+                <input type="text" name="phone" id="" placeholder="Your Phone Number" required />
                 <br />
                 <Link to='/thankyou'>
             <button className='btn btn-primary'>Processed to Checkout</button>
