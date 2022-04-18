@@ -28,11 +28,8 @@ const Header = () => {
                                 {
                                     user ? <button onClick={handleSignOut}>Sign out</button>
                                     :
-                                    <Nav.Link as={Link} to='login'>Login</Nav.Link>} 
-                        <Nav>
-                            
-                            
-                            
+                                    <Nav.Link as={Link} to='login'><div className='text-white h3 '>Login</div></Nav.Link>} 
+                        <Nav>     
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

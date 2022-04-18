@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import GoogleLogin from './GoogleLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -18,6 +19,8 @@ const Login = () => {
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
+
+     
 
       if(user)
       navigate(from, {replace: true});
@@ -57,6 +60,7 @@ const Login = () => {
                 </Button>
             </Form>
             <p>New to Shah Photography? <Link to='/signup' className='text-danger text-decoration-none' onClick={navigateSignup}>Signup Now</Link></p>
+            <GoogleLogin></GoogleLogin>
         </div>
     );
 };
