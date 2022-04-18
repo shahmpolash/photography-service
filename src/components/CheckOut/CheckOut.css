@@ -1,0 +1,14 @@
+.checkout {
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 41px 41px 100px #bcbcbc,
+        -41px -41px 100px #ffffff;
+}
+
+.checkout input{
+    display: block;
+}
+.input input{
+    font-size: 30px;
+    margin: 20px;
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import '../Signup/Signup.css';
 import auth from '../../firebase.init';
 
@@ -10,7 +10,8 @@ const Signup = () => {
         user,
         loading,
         error,
-      ] = useCreateUserWithEmailAndPassword(auth);
+      ] = useCreateUserWithEmailAndPassword(auth, {sendEmailVerification: true});
+      const [updateProfile, updating, undateError] = useUpdateProfile(auth);
 
     const navigate =  useNavigate();
 
@@ -18,16 +19,16 @@ const Signup = () => {
         navigate('/login');
     }
 
-    if(user){
-        navigate('/home');
-    }
-    const handleSignup = event =>{
+   
+    const handleSignup = async (event) =>{
         event.preventDefault();
         const name = event.target.name.value;
         const email = event.target.email.value;
         const password = event.target.password.value;
 
-        createUserWithEmailAndPassword(email, password);
+       await createUserWithEmailAndPassword(email, password);
+       await updateProfile({ displayName: name });
+       navigate('/home');
 
     }
 
@@ -35,11 +36,11 @@ const Signup = () => {
         <div className='signup-form'>
             <h2>SignUp Now</h2>
             <form onSubmit={handleSignup} className='container'>
-                <input type="text" name="name" id="" placeholder='Your Name' />
+                <input type="text" name="name" id="" placeholder='Your Name' required />
                 <br />
-                <input type="email" name="email" id="" placeholder='Your Email' />
+                <input type="email" name="email" id="" placeholder='Your Email' required />
                 <br />
-                <input type="password" name="password" id="" placeholder='Your Password' />
+                <input type="password" name="password" id="" placeholder='Your Password' required />
                 <br />
                 <input className='bg-danger' type="submit" value="Signup" />
             </form>

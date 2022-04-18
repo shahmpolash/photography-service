@@ -2,6 +2,7 @@ import React from 'react';
 import Services from '../Services/Services';
 import '../Home/Home.css';
 import Banner from '../Banner/Banner';
+import Photos from '../Photos/Photos';
 
 const Home = () => {
     return (
@@ -15,6 +16,8 @@ const Home = () => {
             <div id="services" className='service-container'>
             <Services></Services>
             </div>
+            <h2>Photo Gallery</h2>
+            <Photos></Photos>
             </div>
             
         </div>

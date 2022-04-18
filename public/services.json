@@ -3,21 +3,33 @@
       "id": "1",
       "name": "Silvar",
       "img" : "https://riss-photography.com/wp-content/uploads/2020/04/Fiji-Indian-Wedding-5-1.jpg",
-      "description": "This bike is really good for the money. With all the mixed reviews, I didn't know what to expect, and when I saw the box was a bit beat up I was a bit concerned.",
+      "details1": "1 senior photographer.",
+      "details2": "200-300 photoshoot",
+      "details3": "Specially Edited Photos: 50 Photos + All edited,",
+      "details4": "Duration: 2 Hours Event Coverage",
+      "details5": "Printed copies:4R-50 copies.",
       "price": "5,500"
     },
     {
       "id": "2",
       "name": "Gold",
       "img": "https://riss-photography.com/wp-content/uploads/2020/06/Croatian-Club-Wedding-Photography-4-1.jpg",
-      "description": "I got the bike to start cycling. It was easy to put together and for starting off its not bad at all. It looks good and its fun to ride.",
+      "details1": "2 senior photographer.",
+      "details2": "300-500 photoshoot",
+      "details3": "Specially Edited Photos: 150 Photos + All edited,",
+      "details4": "Duration: 4 Hours Event Coverage",
+      "details5": "Printed copies:4R-50 copies.",
       "price": "10,000"
     },
     {
       "id": "3",
       "name": "Diamond",
-      "img": "https://riss-photography.com/wp-content/uploads/2020/04/amazing-turkish-couple-1.jpg",
-      "description": "I purchased this bike back in March to commute to work 17 miles a day round trip in NYC. In honesty, I bought this as a quick fix to taking the subway during",
+      "img": "https://riss-photography.com/wp-content/uploads/2020/04/amazing-turkish-couple-1.jpg", 
+      "details1": "1 senior photographer.",
+      "details2": "Unlimited photoshoot",
+      "details3": "Specially Edited Photos: 500 Photos + All edited,",
+      "details4": "Duration: 12 Hours Event Coverage",
+      "details5": "Printed copies:4R-50 copies.",
       "price": "15,000"
     }
     
